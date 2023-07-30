@@ -34,3 +34,4 @@ Iniciar o serquelize-cli e criar o arquivo config
 
 Manipular variáveis de ambientes
 ### npm install dotenv --save
+
