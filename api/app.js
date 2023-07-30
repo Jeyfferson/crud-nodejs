@@ -4,14 +4,21 @@ const express = require('express');
 //Chamar a funçã express
 const app = express();
 
-//Testar conexão com banco de dados
+// Criar um middleware para receber os dados no corpo da requisição
+app.use(express.json());
+//Incluir o arquivo que possui a conexão com banco de dados
 const db = require('./db/models');
+
+
+//Testar conexão com banco de dados
+//const db = require('./db/models');
 
 //Incluir controllers
 const users = require('./controllers/users');
 
 //Criar as rotas
 app.use('/', users);
+
 
 
 //Iniciar o servidor na porta 3000, criar a função utilizando modelo Arrow function para retornar a mensagem de sucesso
